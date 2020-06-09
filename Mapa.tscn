@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://WinterTileset/png/Tiles/2.png" type="Texture" id=2]
 [ext_resource path="res://SPRITES/player/walk/walk-11.png" type="Texture" id=3]
 [ext_resource path="res://SPRITES/player/idle/idle-1.png" type="Texture" id=4]
 [ext_resource path="res://SPRITES/player/walk/walk-5.png" type="Texture" id=5]
@@ -36,9 +36,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "move",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
@@ -46,9 +46,9 @@ animations = [ {
 "name": "run",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "idle",
+"name": "move",
 "speed": 5.0
 } ]
 
@@ -93,13 +93,17 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 225.268, 190 )
-scale = Vector2( 20.0084, 1.28125 )
+position = Vector2( -230.218, 180.57 )
+scale = Vector2( 0.844308, 0.434782 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 230.209, 275.364 )
+scale = Vector2( 8.03847, 1.91593 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 248.441, 180 )
+position = Vector2( 248.441, 182.71 )
 shape = SubResource( 3 )
 
 [node name="Antena" type="Sprite" parent="."]
